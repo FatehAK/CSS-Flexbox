@@ -1,0 +1,95 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.15em;
+    text-align: center;
+    background-color: rgb(36, 36, 44);
+}
+
+h3 {
+    color: #fff;
+    margin: 2.5em 0 -3em 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* used for centering the element */
+}
+
+.flex-parent {
+    /* you can use this as well for centering the element */
+    /* margin : auto; */
+    background: rgb(54, 54, 54);
+    width: 700px;
+    height: 700px;
+    display: flex; /* Need to set flex again since this element's children won't be flexed otherwise */
+    align-content: space-evenly; /* Control spacing between between rows of flex boxes on cross axis (vertical)*/
+    /* Interchange the cross axis and the main axis */
+    /* flex-direction: column;   */
+    flex-wrap: wrap; /* flex-boxes keep their original size and wrap to next line if total size of all flex-boxes > width of container */
+    align-items: center;  /* Align flex boxes on cross axis (vertical) */
+    justify-content: space-evenly; /* Align flex boxes on main axis (horizontal)*/
+    /* Control direction of flex items in rtl | ltr */
+    /* direction: rtl; */
+}
+
+.a {
+    background: rgb(255, 77, 77);
+    line-height: 200px;
+    flex: 0 1 200px;  /* flex-grow | flex-shrink | flex-basis */
+    margin-left: auto; /* Push item to the left side (useful for navigational purposes) */
+    order: 4;
+}
+
+.b {
+    background: rgb(255, 166, 0);
+    line-height: 150px;
+    flex: 0 1 200px;
+    align-self: flex-start; /* Control individual box alignment on cross axis (vertical) */
+    order: 3;
+}
+
+.c {
+    background: rgb(235, 229, 171);
+    line-height: 200px;
+    flex: 0 1 200px;
+    margin-right: auto;
+    order: 2;
+}
+
+.d {
+    background: rgb(167, 160, 89);
+    line-height: 200px;
+    flex: 0 1 200px;
+    order: 1;
+}
+
+.e {
+    background: rgb(235, 232, 255);
+    line-height: 150px;
+    flex: 0 1 200px;
+    align-self: flex-end;
+}
+
+.f {
+    background: rgb(11, 192, 177);
+    line-height: 200px;
+    flex: 0 1 200px;
+    order: -1; /* order from -ve / 0 (default) / +ve */
+}
+
+footer > span {
+    color: #fff;
+    font-size: 0.8em;
+    position: relative;
+    bottom: 100px;
+}
+
+a:link {
+    color: #fff;
+}
